@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\input{tools/packages.tex}
+\input{tools/styles.tex}
+
+\fontsize{12}{14} % Tamaño de fuente de 12 puntos y espaciado de línea de 14 puntos
+\selectfont
+
+\setdefaultlanguage{catalan}
+
+
+\title{TDR}
+\author{Pol Sances Guirao}
+\date{September 2023}
+
+
+
+
+\begin{document}
+
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=\textwidth]{img/logos/logo_TdR.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{center}
+            \textbf{\Huge Road to 3BLD}\\
+            \vspace{0.5cm}
+            \textbf{\LARGE Institut LLuís Companys}\\
+            \vspace{0.5cm}
+            \textbf{\Large 2n Batxillerat}\\
+            \vspace{0.5cm}
+            \textbf{\large Autor: Pol Sances Guirao}
+        \end{center}
+    \end{minipage}
+
+    \vfill
+    \vspace*{\fill}
+    
+    \textbf{Tordera, Gener de 2024}
+\end{titlepage}
+
+
+
+
+\newpage
+\input{Sections/Abstract}
+
+
+\newpage
+\tableofcontents
+
+\newpage
+\input{Sections/Introduction}
+
+\newpage
+\input{Sections/Historia_del_cub_de_rubik}
+
+
+\newpage 
+\bibliographystyle{plain}
+\bibliography{Bibliografia}
+\addcontentsline{toc}{section}{\refname}
+
+
+
+\end{document}
