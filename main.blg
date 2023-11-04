@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Database file #1: Bibliografia.bib
+Warning--entry type for "redbull-cub" isn't style-file defined
+--line 117 of file Bibliografia.bib
+Warning--to sort, need author or key in redbull-cub
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            504 strings with 4101 characters,
+and the built_in function-call counts, 383 in all, are:
+= -- 31
+> -- 8
+< -- 0
++ -- 4
+- -- 2
+* -- 15
+:= -- 61
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 19
+empty$ -- 46
+format.name$ -- 2
+if$ -- 84
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 11
+num.names$ -- 2
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 5
+quote$ -- 0
+skip$ -- 16
+stack$ -- 0
+substring$ -- 10
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 6
+warning$ -- 1
+while$ -- 2
+width$ -- 3
+write$ -- 17
+(There were 2 warnings)

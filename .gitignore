@@ -1,0 +1,11 @@
+.idea
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.toc
+*.dat
+*.log
+rubikexampfig.tex
