@@ -7,4 +7,6 @@
 *.toc
 *.dat
 *.log
-rubikexampfig.tex
+*.gz
+*.out
+rubikexampfig3.tex
