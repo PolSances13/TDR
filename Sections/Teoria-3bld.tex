@@ -1,4 +1,3 @@
-\vspace{5cm}
 \subsection{El Concepte de 3BLD}
 
 Per començar cal entendre el funcionament d'una resolució de blind, primer el cub és barrejat per una persona i el posa dins d'una capsa o un cube cover\footnote{Un cube cover és una tapa per cubs feta de cartró i que s'utlitza a les competicions}, després es col·loca a la taula boca avall i la persona que l'ha de resoldre es pren el seu temps per respirar. 
@@ -65,55 +64,44 @@ $$ \textrm{Memorització Total DW LA BV PX RI GT NU MH VS MC } $$
         \centering
         \begin{tabular}{|c|c|}
             \hline
-            Lletres & Transcripció\\\hline
-            DW &             \\\hline
-            LA & Los Ángeles \\\hline
-            BV &             \\\hline
-            PX &             \\\hline
-            DF &             \\\hline 
+            Lletres & Transcripció\\
+            \hline
+            DW & DeU (pronunciació)\\
+            \hline
+            LA & Los Ángeles\\
+            \hline
+            BV & BBVA\\
+            \hline
+            PX & PeiX\\
+            \hline
+            DF &  DoFí\\
+            \hline 
+            Ri & RIu  \\
+            \hline
         \end{tabular}
     \end{minipage}
     \begin{minipage}{.5\linewidth}
         \centering
         \begin{tabular}{|c|c|}
             \hline
-            Lletres & Transcripció\\\hline
-            DW &             \\\hline
-            LA & Los Ángeles \\\hline
-            BV &             \\\hline
-            PX &             \\\hline
-            DF &             \\\hline 
+            Lletres & Transcripció\\
+            \hline
+            GT & Gran Turismo \\
+            \hline
+            NU & NUt (Femella en anglés)\\
+            \hline
+            MH & MoHa\\
+            \hline
+            VS &  VerSuS\\
+            \hline 
+            MC &  MigCampista\\
+            \hline
         \end{tabular}
     \end{minipage} 
 \end{table}
 
 
-\begin{table}[h]
-    \begin{minipage}{.5\linewidth}
-        \centering
-        \begin{tabular}{|c|c|}
-            \hline
-            Lletres & Transcripció\\\hline
-            DW &             \\\hline
-            LA & Los Ángeles \\\hline
-            BV &             \\\hline
-            PX &             \\\hline
-            DF &             \\\hline 
-        \end{tabular}
-    \end{minipage}
-    \begin{minipage}{.5\linewidth}
-        \centering
-        \begin{tabular}{|c|c|}
-            \hline
-            Lletres & Transcripció\\\hline
-            DW &             \\\hline
-            LA & Los Ángeles \\\hline
-            BV &             \\\hline
-            PX &             \\\hline
-            DF &             \\\hline 
-        \end{tabular}
-    \end{minipage} 
-\end{table}
+
 
 
 \subsubsection{Execució}
@@ -122,11 +110,362 @@ L'execució és la segona fase per completar el cub a cegues i es fa d'una maner
 \\Com que el cub no ha de rotar, les peces també s'han de quedar en el mateix lloc a l'acabar l'algoritme, és a dir, és executar un algoritme, mous les dues peces que vols i acabes amb la resta del cub igual però amb les dues peces canviades. 
 \\\\Hi han diferents nivells d'eficiència d'algoritmes, i es perquè amb els algoritmes més complicats es pot fer de manera més eficient i per tant hi ha menys moviments, però en canvi és més difícl d'aprendre-se'ls. L'explicació darrere d'això és:
 
-$$  $$
+$$ \textrm{Quan fas un algoritme fas} \rightarrow Y X Y' X' $$
+
+El que fem es fa és executar uns moviments que li direm seqüència Y , que normalment aquesta és per preparar el lloc on les peces es canviaran, després fem una seqüència X, en aquesta el que fem es intercanviar les peces en, després fem la secuencia Y' que és la secuencia y al revés, aquesta el que fa es tornar enrere el moviment fet anteriorment i preparar el retorn de la secuència Y'. FInalment amb la secuencia Y' el que fem retornar el cub a l'estat anterior però amb les peces objectius canviades.
+\\\\Un exemple d'això és un intercanvi de tres cantonades, que visualment pas a pas aplicant una seqüència darrera de l'altra es veu:
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,D,R}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \caption{Secuencia Y (Esquerra) i Y X (Dreta)}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,D,R,Up}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,D,R,Up,Rp,Dp,R}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \caption{Secuencia Y X Y' (Esquerra) i Y X Y'X' (Dreta)}
+\end{figure}
+
+Com es pot veure tot acaba per intercanviar 3 cantonades deixant el cub exactament igual, les seqüències són els moviments següents.
+\begin{itemize}
+    \item X = U
+    \item Y = R' D R
+    \item X' = U'
+    \item Y' = R' D' R
+\end{itemize}
+
+Aquesta explicació s'atribueix al mètode més avançat que ja, que no és el que jo utilitzo, ja que el mètode més avançat són 400 algoritmes per cantonades i gairebé 400 per arestes, a més a més es tarden anys d'experiència no només per memoritzar sinó per obtenir la memòria muscular\footnote{És la memòria que fa que nosaltres movem els músculs d'una manera quan pensem una cosa, com quan escrius a l'ordinador.}.
+
+Jo utilitzo el mètode de dificultat mijta-alta però que també té gran eficiència, tinc un mètode per arestes i un mètode per cantonades.
+
+\subsubsection{El mètode d'execució per les arestes.}
+
+Per les arestes utlitzo el mètode M2, que com ja ho diu el seu nom es basa en el moviment M2, que és el moviment de la capa del mig del cub 2 vegades.
+
+\begin{figure}[h]
+    \centering\RubikCubeSolvedWY
+    \RubikRotation{Y,M2}
+    \ShowCube{7cm}{0.7}{\DrawRubikCubeLU}
+    \caption{Exemple de Moviment M2}
+\end{figure}
     
+Aquest mètode intercanvia les peces d'una manera peculiar, ja que ha de fer dos vegades M2 per tornar a l'estat original i canviat dues peces. Per exemple, fas primer la seqüència Y que col·loca la peça al lloc d'intercanvi, després fas la seqüència X que en aquesta cas és M2 i després fas Y' per retornar la peça intercanviada. Un cop fet això s'han canviat dues peces però el cub no queda igual que abans perquè hem de tornar a fer un intercanvi, aquest segon intercanvi ha de ser amb una seqüència Z X Z' perquè hem d'intercanviar una peça que no sigui la mateixa.
+El mètode té aquests casos següents:
+
+\begin{table}[h]
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            A & M2 \\
+            \hline
+            B & R' U R U' M2 U R' U' R \\
+            \hline
+            C & U2 M' U2 M' \\
+            \hline
+            D & L U' L' U M2 U' L U L'  \\
+            \hline
+            E & B L' B' M2 B L B'  \\
+            \hline
+            F & B L2 B' M2 B L2 B' \\
+            \hline
+            G & B L B' M2 B L' B' \\
+            \hline
+            H & L B L' B' M2 B L B' L' \\
+            \hline
+            I & D M' U R2 U' M U R2 U' D' M2 \\
+            \hline
+            J & U R U' M2 U R' U' \\
+            \hline
+            K & Posició d'intercanvi \\
+            \hline
+            L & U' L' U M2 U' L U \\
+            \hline 
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+             M & B' R B M2 B' R' B \\
+             \hline
+             N & R' B' R B M2 B' R' B R  \\
+             \hline
+             O & B' R' B M2 B' R B \\
+             \hline
+             P & B' R2 B M2 B' R2 B \\
+             \hline
+             Q & U B' R U' B (M2) B' U R' B U' \\
+             \hline
+             R & U' L U M2 U' L' U \\
+             \hline
+             S & M2' D U R2 U' M' U R2 U' M D' \\
+             \hline
+             T & U R' U' M2 U R U'  \\
+             \hline
+             U & Posició d'intercanvi \\
+             \hline
+             V & U R2 U' M2 U R2 U' \\
+             \hline
+             W & M U2 M U2  \\
+             \hline
+             X & U' L2 U M2 U' L2 U \\
+             \hline 
+        \end{tabular}
+    \end{minipage} 
+\end{table}
+
+Exemple d'intercanvi d'arestes L i V:
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,Up,Lp,U}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,Up,Lp,U,M2}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \caption{Secuencia Y (Esquerra) i Y X (Dreta)}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,Up,Lp,U,M2,Up,L,U}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,Up,Lp,U,M2,Up,L,U,U,R2,Up}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \caption{Secuencia Y X Y' (Esquerra) i Y X Y'Z (Dreta)}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,Up,Lp,U,M2,Up,L,U,U,R2,Up,M2}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,Up,Lp,U,M2,Up,L,U,U,R2,Up,M2,U,R2,Up}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeRU}
+    \end{subfigure}
+    \caption{Secuencia Y X Y'Z'X (Esquerra) i Y X Y'Z X Z' (Dreta)}
+\end{figure}
+
+LLavors així és com es canviarien dues arestes amb el mètode M2, en aquest cas L i V.
+
+\subsection{Mètode d'execució per les Cantonades}
+
+Per les cantonades utlitzo el mètode orozco, que utlitza un sistema similar al M2, ja que fa les seqüències Y X Y'X' i Z A Z' A' però en aquest cas la seqüència Z és diferent perquè es troba al segon lloc. De manera simple, si a la memorització tens la lletra en segon lloc has de fer l'algoritme alternatiu.
+Els casos d'orozco són els següents:
+
+\begin{table}[h]
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{|c|c|} 
+            \hline
+            \textbf{AB} & Basic A Perm \\
+            \hline
+            \textbf{DB} & U' (A Perm) U \\
+            \hline
+            \textbf{EB} & [R: [R D R', U]] \\
+            \hline
+            \textbf{FB} & [R': [U', R' D' R]] \\
+            \hline
+            \textbf{GB} & [U, R' D R] \\
+            \hline
+            \textbf{HB} & [R D' R', U'] \\
+            \hline
+            \textbf{IB} & [R: [R D R', U2]] \\
+            \hline
+            \textbf{KB} & [D': [U, R' D R]] \\
+            \hline
+            \textbf{LB} & [D: [U, R' D' R]] \\
+            \hline
+            \textbf{OB} & [R D R', U'] \\
+            \hline
+            \textbf{PB} & [U, R' D' R] \\
+            \hline
+            \textbf{RB} & [R': [U2, R' D' R]] \\
+            \hline
+            \textbf{SB} & [U, R' D2 R] \\
+            \hline
+            \textbf{TB} & [D: [R D' R', U']] \\
+            \hline
+            \textbf{UB} & [x': [R U R', D2]] \\
+            \hline
+            \textbf{VB} & [D' x': [R U R', D2]] \\
+            \hline
+            \textbf{WB} & [D x: [D2, R' U' R]] \\
+            \hline
+            \textbf{XB} & [x: [D2, R' U' R]] \\
+            \hline 
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{BA} & Reverse A Perm \\
+            \hline
+            \textbf{BD} & U' (Reverse A Perm) U \\
+            \hline
+            \textbf{BE} & [R: [U, R D R']] \\
+            \hline
+            \textbf{BF} & [R': [R' D' R, U']] \\
+            \hline
+            \textbf{BG} & [R' D R, U] \\
+            \hline
+            \textbf{BH} & [U', R D' R'] \\
+            \hline
+            \textbf{BI} & [R: [U2, R D R']] \\
+            \hline
+            \textbf{BK} & [D': [R' D R, U]] \\
+            \hline
+            \textbf{BL} & [D: [R' D' R, U]] \\
+            \hline
+            \textbf{BO} & [U', R D R'] \\
+            \hline
+            \textbf{BP} & [R' D' R, U] \\
+            \hline
+            \textbf{BR} & [R': [R' D' R, U2]] \\
+            \hline
+            \textbf{BS} & [R' D2 R, U] \\
+            \hline
+            \textbf{BT} & [D: [U', R D' R']] \\
+            \hline
+            \textbf{BU} & [x': [D2, R U R']] \\
+            \hline
+            \textbf{BV} & [D' x': [D2, R U R']] \\
+            \hline
+            \textbf{BW} & [D x: [R' U' R, D2]] \\
+            \hline
+            \textbf{BX} & [x: [R' U' R, D2]] \\
+            \hline 
+        \end{tabular}
+    \end{minipage} 
+    \caption{Algorimtes orozco}
+\end{table}
+
+A la columna de l'esquerra hi ha els corresponents a la primera lletra del parell i a la dreta els corresponents a la segona lletra del parell. \textit{A perm} és un cas del cub de rubik normal que es fa (R' U' R' D' R U' R' D R U R' D' R U R' D R2).
+
+\begin{table}[h]
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{NB} & [U, R' D R D' R' D' R] \\
+            \hline
+            \textbf{QB} & [R' D R D' R' D' R, U] \\
+            \hline
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{BN} & [R' D R D' R' D' R, U] \\
+            \hline
+            \textbf{BQ} & [U, R' D R D' R' D' R] \\
+            \hline 
+        \end{tabular}
+    \end{minipage} 
+    \caption{Excepcions del mètode}
+\end{table}
 
 
 
+Aquests algoritmes estan escrits en una notació\footnote{Manera d'escriure els algoritmes} diferenti [Y,X]. El fet que estigui entre claudators indica que s'ha de fer en l'ordre Y X Y' X'. És una mica més díficil de visualitzar però més fàcil a l'hora d'aplicar aquest mètode.
+Exepmle d'intercanvi de dues cantonades P i H
 
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \caption{Secuencia Y (Esquerra) i Y X (Dreta)}
+\end{figure}
 
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R,Up}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \caption{Secuencia Y X Y' (Esquerra) i Y X Y' X'(Dreta)}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R,Up}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R,Up,R,Dp,Rp}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \caption{Secuencia Y X Y' X' Z (Esquerra) i Y X Y' X' Z A(Dreta)}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R,Up,R,Dp,Rp,U}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering\RubikCubeSolvedWY
+        \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R,Up,R,Dp,Rp,U,R,D,Rp}
+        \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
+    \end{subfigure}
+    \caption{Secuencia Y X Y' X' Z A Z' (Esquerra) i Y X Y' X' Z A Z' A'(Dreta)}
+\end{figure}
+
+Com a orientació [Y,X] i [Z,A] són a la taula d'algoritmes PB i BH.
 
