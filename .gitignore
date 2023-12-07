@@ -9,4 +9,6 @@
 *.log
 *.gz
 *.out
+*.bcf
+main.run.xml
 rubikexampfig3.tex
