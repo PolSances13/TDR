@@ -21,18 +21,17 @@ Com ja he esmentat a la seccio anterior, completar el cub de Rubik amb els ulls 
 \subsection{Memorització}
 
 Durant aquesta fase de memorització, com ja ho diu el seu nom, s'ha de memoritzar el cub. Molta gent pensa que els speedcubers que practiquem blind memoritzem el cub color per color mitjançant la memòria fotogràfica, però la veritat no és així, perquè la memòria fotogràfica només la té molt poca gent, i bé, jo m'enrecordo dels objectes que tinc a la taula si tanco els ulls ara mateix, però memoritzar el cub d'aquesta manera porta molt de temps i no és la més eficient de fer-ho.
-El que fem es convertir aquestes posicions on estan les peçes del cub, que "només" són 20 en lletres i ho fem d'una manera distribuida en ordre que nosaltres ens memoritzem. L'esquema de lletres\footnote{És la distribució de lletres} que utilizo és el que es veu a la següent figura.
+El que fem es convertir aquestes posicions on estan les peçes del cub, que "només" són 20 en lletres i ho fem d'una manera distribuida en ordre que nosaltres ens memoritzem. L'esquema de lletres\footnote{És la distribució de lletres} que utilizo es veu a la figura \ref{fig:letter-scheme}.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{img/figures/letter-scheme.png}
-\caption{Esquema de LLetres}
+\caption{Esquema de Lletres}
     \label{fig:letter-scheme}
 \end{figure}
 
 Com es pot veure hi han lletres repetides i això és degut a que hi ha memorització per arestes i memorització per cantonades. Com està mencionat a la secció 1.2.2 en el cub hi ha 8 arestes i 12 cantonades, per tant haig de memoritzar respectivament 12 lletres d'arestes i 8 lletres de cantonades.
-Un altre cop tenim el problema de que no és gaire eficient memoritar les lletres una per una i és per això que la manera correcta de fer-ho és:
-\\\\Memoritzar dos lletres i amb aquestes dos lletres formar una paraula de la qual puguis pensar en una imatge en la que et puguis enrecordar. En resum, és converir parells de lletres en en imatges, per tant ara tenim la meitat d'ítems a memoritzar. Un exemple d'aquesta fusío de lletres és. 
+Un altre cop tenim el problema de que no és gaire eficient memoritar les lletres una per una i és per això que la manera correcta de fer-ho és la següent. Memoritzar dues lletres i amb aquestes dos lletres formar una paraula de la qual et sigui fàcil pensar en una imatge la qual et pots enrecordar fàcilment. En resum, és convertir parells de lletres en en imatges, per tant ara tenim la meitat d'ítems a memoritzar. Un exemple d'aquesta fusió de lletres és: 
 \vspace{0.25cm}
 
 $$ \textrm{Haig de memoritzar les lletres R i B    }  \rightarrow \textrm{   RedBull} $$
@@ -40,7 +39,7 @@ $$ \textrm{Haig de memoritzar les lletres A i C   }  \rightarrow \textrm{   Aire
 
 \vspace{0.33cm}
 
-De maner pràctica es comença a memortizar desde la peça UK mirant el color de U, de la lletra en la posicó U que és la inicial i treus una lletra i llavors mires a la posció on hi ha d'anar aquesta primera lletra que has trobat i mires quina lletra treus, i així fins que memoritzis totes les arestes i després fas el mateix amb les cantonades. És una concepte díficl d'explicar amb paraules i es veu millor al següent exemple. Cal destacar que al començar a memortizar la posció UK la saps perquè poses el centre verd mirant cap a tu i el centre blanc mirant cap a dalt.
+De manera pràctica es comença a memortizar desde la peça UK mirant el color de U, de la lletra en la posició U que és la inicial i treus una lletra i llavors mires a la posciió on ha d'anar aquesta primera lletra que has trobat i mires quina lletra treus, i així fins que memoritzis totes les arestes i després fas el mateix amb les cantonades. És una concepte díficl d'explicar amb paraules i es veu millor al següent exemple. Cal destacar que al començar a memortizar la posició UK la saps perquè col·loques el centre verd mirant cap a tu i el centre blanc mirant cap a dalt.
 \\\\BARREJA: F2 B R2 U'L2 U2 B' L' F2 U' B2 U L2 U R2 F2 L2 U' L2 F
 
 \begin{figure}[h!]
@@ -51,7 +50,7 @@ De maner pràctica es comença a memortizar desde la peça UK mirant el color de
     \label{exemple-memo}
     \end{figure}
 
-Començem mirant all lloc de U K com a l'esquema de lletres i veiem que és blanca a lloc U i taronja al lloc K, llavors ens fixem mirem l'esquema de lletres en l'aresta blanca-taronja i veiem que és la lletra D. 
+Començem mirant all lloc de U K com a l'esquema de lletres i veiem que és blanca a lloc U i taronja al lloc K, llavors ens fixem en l'esquema de lletres en l'aresta blanca-taronja i veiem que és la lletra D. 
 Després ens fixem en el lloc de la lletra D i està una peça blanca-verda que és la lletra C, però és un cas especial, que més tard parlo a la secció d'execució però aquesta C es converteix en W, no s'ha de saber res més, només és per tenir el concepte entès. Això ho fem succesivament i obtenim que les lletres totals que ens hem de memoritzar són:
 
 $$ \textrm{Memorització Arestes: DW LA BV PX RI GT N } $$ $$ \textrm{(En aquest cas surten 13 perquè ha sigut una barreja amb cas especial)} $$
@@ -106,13 +105,13 @@ $$ \textrm{Memorització Total DW LA BV PX RI GT NU MH VS MC } $$
 
 \subsection{Execució}
 
-L'execució és la segona fase per completar el cub a cegues i es fa d'una maner molt diferent a la que es fa el cub de manera convencional. Quan tu resols el cub mirant tu fas rotacions al cub per buscar les peces i fer moviments, en canvi a les resolucions a cegues el cub no es rota en tota l'execució. Llavors les peces s'aconsegueixen col·locar a lloc gràcies a algoritmes\footnote{És una seqüència de moviments que permet realitzar una tasca}.
+L'execució és la segona fase per completar el cub a cegues i es fa d'una maner molt diferent a la que es fa el cub de manera convencional. Quan resols el cub mirant fas rotacions al cub per buscar les peces i fer moviments, en canvi a les resolucions a cegues el cub no es rota en tota l'execució. Llavors les peces s'aconsegueixen col·locar a lloc gràcies a algoritmes\footnote{És una seqüència de moviments que permet realitzar una tasca}.
 \\Com que el cub no ha de rotar, les peces també s'han de quedar en el mateix lloc a l'acabar l'algoritme, és a dir, és executar un algoritme, mous les dues peces que vols i acabes amb la resta del cub igual però amb les dues peces canviades. 
 \\\\Hi han diferents nivells d'eficiència d'algoritmes, i es perquè amb els algoritmes més complicats es pot fer de manera més eficient i per tant hi ha menys moviments, però en canvi és més difícl d'aprendre-se'ls. L'explicació darrere d'això és:
 
 $$ \textrm{Quan fas un algoritme fas} \rightarrow Y X Y' X' $$
 
-El que fem es fa és executar uns moviments que li direm seqüència Y , que normalment aquesta és per preparar el lloc on les peces es canviaran, després fem una seqüència X, en aquesta el que fem es intercanviar les peces en, després fem la secuencia Y' que és la secuencia y al revés, aquesta el que fa es tornar enrere el moviment fet anteriorment i preparar el retorn de la secuència Y'. FInalment amb la secuencia Y' el que fem retornar el cub a l'estat anterior però amb les peces objectius canviades.
+El que es fa, és executar uns moviments que li direm seqüència Y , que normalment aquesta és per preparar el lloc on les peces es canviaran, després fem una seqüència X, en aquesta el que fem es intercanviar les peces entre elles, després fem la secuencia Y' que és la secuencia y al revés, aquesta el que fa és tornar enrere el moviment fet anteriorment i preparar el retorn de la secuència Y'. FInalment amb la secuencia Y' el que fem retornar el cub a l'estat anterior però amb les peces objectius canviades.
 \\\\Un exemple d'això és un intercanvi de tres cantonades, que visualment pas a pas aplicant una seqüència darrera de l'altra es veu:
 
 \begin{figure}[htbp]
@@ -153,7 +152,7 @@ Com es pot veure tot acaba per intercanviar 3 cantonades deixant el cub exactame
     \item Y' = R' D' R
 \end{itemize}
 
-Aquesta explicació s'atribueix al mètode més avançat que ja, que no és el que jo utilitzo, ja que el mètode més avançat són 400 algoritmes per cantonades i gairebé 400 per arestes, a més a més es tarden anys d'experiència no només per memoritzar sinó per obtenir la memòria muscular\footnote{És la memòria que fa que nosaltres movem els músculs d'una manera quan pensem una cosa, com quan escrius a l'ordinador.}.
+Aquesta explicació s'atribueix al mètode més avançat, que no és el que jo utilitzo, ja que el mètode més avançat són 400 algoritmes per cantonades i gairebé 400 per arestes, a més a més es tarden anys d'experiència no només per memoritzar sinó per obtenir la memòria muscular\footnote{És la memòria que fa que nosaltres movem els músculs d'una manera quan pensem una cosa, com quan escrius a l'ordinador.}.
 
 Jo utilitzo el mètode de dificultat mijta-alta però que també té gran eficiència, tinc un mètode per arestes i un mètode per cantonades.
 
@@ -168,7 +167,7 @@ Per les arestes utlitzo el mètode M2, que com ja ho diu el seu nom es basa en e
     \caption{Exemple de Moviment M2}
 \end{figure}
     
-Aquest mètode intercanvia les peces d'una manera peculiar, ja que ha de fer dos vegades M2 per tornar a l'estat original i canviat dues peces. Per exemple, fas primer la seqüència Y que col·loca la peça al lloc d'intercanvi, després fas la seqüència X que en aquesta cas és M2 i després fas Y' per retornar la peça intercanviada. Un cop fet això s'han canviat dues peces però el cub no queda igual que abans perquè hem de tornar a fer un intercanvi, aquest segon intercanvi ha de ser amb una seqüència Z X Z' perquè hem d'intercanviar una peça que no sigui la mateixa.
+Aquest mètode intercanvia les peces d'una manera peculiar, ja que ha de fer dues vegades M2 per tornar a l'estat original i canviar dues peces. Per exemple, fas primer la seqüència Y que col·loca la peça al lloc d'intercanvi, després fas la seqüència X que en aquesta cas és M2 i després fas Y' per retornar la peça intercanviada. Un cop fet això s'han canviat dues peces però el cub no queda igual que abans perquè hem de tornar a fer un intercanvi, aquest segon intercanvi ha de ser amb una seqüència Z X Z' perquè hem d'intercanviar una peça que no sigui la mateixa.
 El mètode té aquests casos següents:
 
 \begin{table}[h]
@@ -281,7 +280,7 @@ Exemple d'intercanvi d'arestes L i V:
     \caption{Secuencia Y X Y'Z'X (Esquerra) i Y X Y'Z X Z' (Dreta)}
 \end{figure}
 
-LLavors així és com es canviarien dues arestes amb el mètode M2, en aquest cas L i V.
+Llavors així és com es canviarien dues arestes amb el mètode M2, en aquest cas L i V.
 
 \subsection{Mètode d'execució per les Cantonades}
 
