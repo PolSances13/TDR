@@ -10,5 +10,6 @@
 *.gz
 *.out
 *.bcf
+main-blx.bib
 main.run.xml
 rubikexampfig3.tex
