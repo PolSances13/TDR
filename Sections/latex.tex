@@ -21,11 +21,15 @@ Text de prova.
     \label{fig:prova-latex}
 \end{figure}
 
+
+A més a més he estat mantenint un control de versions a Github que es pot veure a \href{https://github.com/PolSances13/TDR}{PolSances13/TDR}
+
 \subsection{Les Figures del Document}
 
 Les figures del document són totes d'elaboració pròpia, tant les imatges com els cubs representats al document. 
 Els cubs estan fets també a LaTeX, utlitzan el paquet TikZ, i dins d'aquest paquet es troben els de rubikcube i rubikrotation per fer els cubs i que es mostrin amb els moviments insertats.
-El codi per formar un cub es pot veure al listing \ref{lst:prova-cub}i el resultat a la figura \ref{fig:prova-cub}, hi ha moltes etiquetes però el que mana a l'hora de "fer els moviments" al cub i que es mostri en una orientació o altra són les etiquetes de "RubikRotation" i "DrawRubikCube". 
+El codi per formar un cub es pot veure al listing \ref{lst:prova-cub} i el resultat a la figura \ref{fig:cubs-latex}, hi ha moltes etiquetes però el que mana a l'hora de "fer els moviments" al cub i que es mostri en una orientació o altra són les etiquetes de "RubikRotation" i "DrawRubikCube". 
+\vspace{3cm}
 
 \begin{lstlisting}[style=latex, caption={Exemple de Cubs fets amb el paquet rubikcube}, label={lst:prova-cub}]
     \begin{figure}[htbp]
@@ -55,6 +59,6 @@ El codi per formar un cub es pot veure al listing \ref{lst:prova-cub}i el result
         \RubikRotation{M2,S2,E2}
         \ShowCube{7cm}{0.5}{\DrawRubikCubeRD}
     \end{subfigure}
-    \label{fig:prova-cub}
     \caption{Cubs de demostració fets amb el paquet rubikcube}
+    \label{fig:cubs-latex}
 \end{figure}
