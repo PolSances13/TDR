@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 
 \input{tools/packages.tex}
 \input{tools/styles.tex}
@@ -81,10 +81,11 @@
 \input{Sections/conclusions.tex}
 
 \newpage
-\printbibliography[heading=bibintoc,title={Bibliografia}]
-\nocite{*}
+\input{Annexos/annexos.tex}
 
 \newpage
-\input{Annexos/annexos.tex}
+\printbibliography[heading=bibintoc,title={Bibliografia}]
+\addcontentsline{toc}{chapter}{Bibliografia}
+\nocite{*}
 
 \end{document}
