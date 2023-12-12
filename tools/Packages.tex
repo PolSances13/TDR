@@ -28,6 +28,16 @@
       \renewcommand*{\makelabel}[1]{\hss##1}}
   {\endlist}
   {\item}
+ 
+  
+
+ \newcommand{\nonumchapter}[1]{
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+  }
+  
+  
+  
 \usepackage{pdfpages}
 
 
