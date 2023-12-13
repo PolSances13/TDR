@@ -1,9 +1,8 @@
-\documentclass[oneside]{book}
+\documentclass[11pt,oneside]{book}
 
 \input{tools/packages.tex}
 \input{tools/styles.tex}
-
-\fontsize{12}{14} 
+ 
 \setmainfont{arial}
 
 \setdefaultlanguage{catalan}
@@ -17,6 +16,7 @@
 
 
 \begin{document}
+\frontmatter
 
 
 \begin{titlepage}
@@ -50,12 +50,12 @@
 
 
 
-
 \newpage
 \input{Sections/Abstract}
 
 
 \newpage
+\pagestyle{index}
 \tableofcontents
 
 \newpage
@@ -63,6 +63,8 @@
 
 \newpage
 \input{Sections/metodologia.tex}
+
+\mainmatter
 
 \newpage
 \input{Sections/Historia_del_cub_de_rubik}
@@ -86,6 +88,7 @@
 
 \input{Sections/conclusions.tex}
 
+\backmatter
 \newpage
 \input{Annexos/annexos.tex}
 
