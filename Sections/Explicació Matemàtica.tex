@@ -2,9 +2,14 @@
 
 \section{Interpretar el concepte del cub}
 
-Una gran majoria de la població ha tingut a les seves mans un cub de Rubik, i han intentat resoldre'l sense èxit. Això és totalment normal, ja que només el saben resoldre un 5,8\% de les persones que ho han intentat. \cite{Redbull-cub}
-\\\\Aquesta xifra se sol atribuir a la dificultat del cub, però després d'aprendre a fer el cub de rubik te n'adones compte de què la raó no és aquesta. El fracàs a l'hora trobar la solució bé donat pel fet d'interpretar malament el concepte del funcionament del cub.
-\\\\La majoria de les persones es pensa que el cub conté 54 "peces" de colors perquè calculen que per cada cara hi ha 9 peces i en un cub hi ha 6 cares, per tant estan treballant color a color.
+Una gran majoria de la població ha tingut a les seves mans un cub de Rubik, i han intentat
+resoldre'l sense èxit. Això és totalment normal, ja que només el saben resoldre un 5,8\% de les
+persones que ho han intentat. \cite{Redbull-cub}
+\\\\Aquesta xifra se sol atribuir a la dificultat del cub, però després d'aprendre a fer el cub de
+Rubik te n'adones compte de què la raó no és aquesta. El fracàs a l'hora de trobar la solució ve
+donat pel fet d'interpretar malament el concepte del funcionament del cub.
+\\\\La majoria de les persones es pensa que el cub conté 54 "peces" de colors perquè calculen que per cada cara hi ha 9 peces i en un cub hi ha 6 cares, per tant, estan treballant color a
+color.
 
 $$ \textrm{Nº Quadrats} = 3\textrm{ Quadrats}*3\textrm{ Quadrats}*6\textrm{ Cares} = 54 $$
 
@@ -15,7 +20,7 @@ $$ \textrm{Nº Quadrats} = 3\textrm{ Quadrats}*3\textrm{ Quadrats}*6\textrm{ Car
     \label{fig:plantejament-no}
 \end{figure}
 
-La manera correcta d'interpretar el cub és pensar en el funcionament, com si el desmuntessis, ja que consta de 12 arestes i 8 cantonades, a més a més dels 6 centres que no poden permutar\footnote{Intercanvi de posició amb una altre peça i de l'ordre de tot el conjunt} amb cap altra peça ja que només roten.
+La manera correcta d'interpretar el cub és pensar en el funcionament, com si el desmuntessis, ja que consta de 12 arestes i 8 cantonades, a més a més dels 6 centres que no poden permutar\footnote{Intercanvi de posició amb una altre peça i de l'ordre de tot el conjunt} amb cap altra peça ja que, només roten.
 
 \begin{figure}[ht]
     \centering
@@ -26,9 +31,9 @@ La manera correcta d'interpretar el cub és pensar en el funcionament, com si el
 
 \section{Aplicar les matemàtiques al concepte}
 
-Després d'entendre el funcionament podem aplicar les matemàtiques i extreure el nombre de combinacions possbiles del cub. En primer instant divid el càlcul el dos grups, per una part tenim cantonades i per l'altra arestes.
+Després d'entendre el funcionament podem aplicar les matemàtiques i extreure el nombre de combinacions possibles del cub. En primer instant dividim el càlcul en dos grups, per una part tenim cantonades i per l'altra arestes.
 Per la part de les cantonades es calcula:
-\\\\Tenim 8 cantonades que es poden posar de manera aleatoria en els 8 llocs, i això es calcula com a $ 8! $ \footnote{! és el símbol de factorial o $8*7*6*5*4*3*2*1$}, després aquestes es poden orientar en 3 direccions diferents que matemàticament és $ 3^8 $. Per tant les combinacions tèoriques possibles amb un cub de només cantonades són:
+\\\\Tenim 8 cantonades que es poden posar de manera aleatòria en els 8 llocs, i això es calcula com a $ 8! $ \footnote{! és el símbol de factorial o $8*7*6*5*4*3*2*1$}, després aquestes es poden orientar en 3 direccions diferents que matemàticament és $ 3^8 $. Per tant, les combinacions teòriques possibles amb un cub de només cantonades són:
 
 $$ \textrm{Nº Combinacions cantonades tèoric} = 8!*3^8 = 264.539.520 $$
 
@@ -38,7 +43,7 @@ $$ \textrm{Nº Combinacions cantonades tèoric} = 8!*3^8 = 264.539.520 $$
     \caption{Cub amb només cantonades}
     \label{fig:only-corners}
 \end{figure}
-Per altra banda tenim 12 arestes que igual que amb les cantonades es calcula com a $ 12! $ i com que les arestes del cub només tenen dos orientacions ho multiplicarem per $2^12$. Per tant les combinacions tèoriques possibles amb un cub de només arestes són:  
+Per altra banda, tenim 12 arestes que igual que amb les cantonades es calcula com a $ 12! $ i com que les arestes del cub només tenen dues orientacions ho multiplicarem per $2^12$. Per tant, les combinacions teòriques possibles amb un cub de només arestes són:  
 
 $$ \textrm{Nº Combinacions arestes tèoric} = 12!*2^12 = 1.961.990.553.600$$
 
@@ -52,7 +57,7 @@ $$ \textrm{Nº Combinacions arestes tèoric} = 12!*2^12 = 1.961.990.553.600$$
 Llavors amb aquests càlculs podem extreure les conclusions que les combinacions possibles teòriques d'un cub de rubik són:
 
 $$ \textrm{Nº Combinacions tèoriques} = 8!*3^8*12!*2^{12}= 519.024.039.293.878.272.000 $$
-Però cal dir que aquestes no són les combinacions totals reals del cub de rubik ja que aquestes combinacions estan calculades com si demuntessim el cub com a la \ref{fig:cub-desmuntat} i recol·loquéssim les peces en un estat aleatori.
+Però cal dir que aquestes no són les combinacions totals reals del cub de Rubik, ja que aquestes combinacions estan calculades com si demuntéssim el cub com a la \ref{fig:cub-desmuntat} i recol·loquéssim les peces en un estat aleatori.
 Llavors per calcular les reals s'han de dividir per 12 els casos per restriccions com les que es mostren en la següent figura.
 
 \begin{figure}[ht]
