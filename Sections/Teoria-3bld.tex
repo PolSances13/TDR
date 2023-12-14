@@ -235,7 +235,7 @@ El mètode té aquests casos següents de les taules \ref{tla:m2c}
     \label{tla:m2c}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}
         \centering\RubikCubeSolvedWY
@@ -251,7 +251,7 @@ El mètode té aquests casos següents de les taules \ref{tla:m2c}
     \label{fig:m2c-1}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}
         \centering\RubikCubeSolvedWY
@@ -267,7 +267,7 @@ El mètode té aquests casos següents de les taules \ref{tla:m2c}
     \label{fig:m2c-2}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}
         \centering\RubikCubeSolvedWY
@@ -283,12 +283,15 @@ El mètode té aquests casos següents de les taules \ref{tla:m2c}
     \label{fig:m2c-3}
 \end{figure}
 
-Llavors a les figures \ref{fig:m2c-1} \ref{fig:m2c-2} \ref{fig:m2c-3} es mostra com es canviarien dues arestes amb el mètode M2, en aquest cas L i V.
+Llavors a les figures \ref{fig:m2c-1}, \ref{fig:m2c-2}, \ref{fig:m2c-3}, es mostra com es canviarien dues arestes amb el mètode M2, en aquest cas L i V.
+
 
 \section{Mètode d'execució per les Cantonades}
 
-Per les cantonades utlitzo el mètode orozco, que utlitza un sistema similar al M2, ja que fa les seqüències Y X Y'X' i Z A Z' A' però en aquest cas la seqüència Z és diferent perquè es troba al segon lloc. De manera simple, si a la memorització tens la lletra en segon lloc has de fer l'algoritme alternatiu.
-Els casos d'orozco són els següents:
+Per les cantonades utilitzo el mètode Orozco, que utilitza un sistema similar al M2, ja que fa
+les seqüències Y X Y'X' i Z A Z' A' però en aquest cas la seqüència Z és diferent perquè es
+troba al segon lloc. De manera simple, si a la memorització tens la lletra, en segon lloc, has de
+fer l'algoritme alternatiu. Els casos d'Orozco són els següents:
 
 \begin{table}[h]
     \begin{minipage}{.5\linewidth}
@@ -378,7 +381,8 @@ Els casos d'orozco són els següents:
     \caption{Algorimtes orozco}
 \end{table}
 
-A la columna de l'esquerra hi ha els corresponents a la primera lletra del parell i a la dreta els corresponents a la segona lletra del parell. \textit{A perm} és un cas del cub de rubik normal que es fa (R' U' R' D' R U' R' D R U R' D' R U R' D R2).
+A la columna de l'esquerra hi ha els corresponents a la primera lletra del parell i a la dreta
+els corresponents a la segona lletra del parell. \textit{A Perm} és un cas del cub de Rubik normal que es fa (R' U' R' D' R U' R' D R U R' D' R U R' D R2).
 
 \begin{table}[h]
     \begin{minipage}{.5\linewidth}
@@ -406,8 +410,8 @@ A la columna de l'esquerra hi ha els corresponents a la primera lletra del parel
 
 
 
-Aquests algoritmes estan escrits en una notació\footnote{Manera d'escriure els algoritmes} diferenti [Y,X]. El fet que estigui entre claudators indica que s'ha de fer en l'ordre Y X Y' X'. És una mica més díficil de visualitzar però més fàcil a l'hora d'aplicar aquest mètode.
-Exepmle d'intercanvi de dues cantonades P i H
+Aquests algoritmes estan escrits en una notació\footnote{Manera d'escriure els algoritmes} diferent [Y,X]. El fet que estigui entre claudàtors indica que s'ha de fer en l'ordre Y X Y' X'. És una mica més difícil de visualitzar però més fàcil a l'hora d'aplicar aquest mètode.
+Exemple d'intercanvi de dues cantonades P i H
 
 \begin{figure}[h!]
     \centering
@@ -435,15 +439,15 @@ Exepmle d'intercanvi de dues cantonades P i H
         \centering\RubikCubeSolvedWY
         \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R}
         \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
-    \end{subfigure}
-    \caption{Secuencia Y X Y' (Esquerra) i Y X Y' X'(Dreta)}
-\end{figure}
+        \end{subfigure}
+        \caption{Secuencia Y X Y' (Esquerra) i Y X Y' X'(Dreta)}
+    \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \begin{subfigure}
-        \centering\RubikCubeSolvedWY
-        \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R,Up}
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}
+            \centering\RubikCubeSolvedWY
+            \RubikRotation{Y,U,Rp,Dp,R,Up,Rp,D,R,Up}
         \ShowCube{7cm}{0.5}{\DrawRubikCubeLU}
     \end{subfigure}
     \begin{subfigure}
